@@ -1,2 +1,2 @@
 const user = 'Ram Thapa';
-console.log(user.toUpperCase);
+console.log(user.toUpperCase());
