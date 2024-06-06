@@ -44,9 +44,8 @@ console.log(box7)
 // Q8: Concatenate the 'firstName' and 'lastName' properties of the 'person' object with a space in between.
 // Expected output:
 // 'John Doe'
-const person8 = { firstName: 'John', lastName: 'Doe', age: 25,fullName:function(){ 
-  return this.firstName+' '+this.lastName}};
-person8.fullName()
+const person8 = { firstName: 'John', lastName: 'Doe', age: 25};
+console.log(person8.firstName+' '+person8.lastName)
 
 // Q9: Increment the value of the 'quantity' property in the 'cart' object by 1.
 // Expected output:
