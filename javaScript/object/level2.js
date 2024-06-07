@@ -30,16 +30,8 @@ console.log(product3)
 // false
 const check = ['make', 'model', 'year'];
 const car4 = { make: 'Toyota', year: 2021 };
-
-const checking = check.forEach((item) => {
-  for (let key in car4) {
-    if (item === key) {
-      return console.log(key);
-    }
-  }
-  console.log(false);
-});
-
+const exist = check.every(item => car4.hasOwnProperty(item));
+console.log(exist);
 
 // Q5: Create a copy of the 'student' object without modifying the original object.
 // Expected output:
@@ -67,8 +59,6 @@ for (key in inventory7){
   fruits.push(key)
 }
 console.log(fruits)
-
-
 //or
 console.log(Object.keys(inventory7))
 // Q8: Create an array of all the property values from the 'data' object.
@@ -81,9 +71,19 @@ console.log(Object.values(data8))
 // Expected output:
 // false
 const book9 = { title: 'JavaScript Basics', author: 'John Smith', year: 2020 };
+const nullValues=Object.keys(book9).filter((item)=>{return item===null})
+if (nullValues.length!==0)
+{
+  console.log(true)
+}
+else
+{ console.log(false)
+}
+
 
 
 // Q10: Reverse the 'fullName' property value in the 'person' object.
 // Expected output:
 // 'doe John'
 const person10 = { fullName: 'John doe' };
+person10.fullName.split('').reverse().join('')
